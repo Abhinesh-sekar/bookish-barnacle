@@ -1,129 +1,74 @@
-.\" darkmode.rm - Documentation for the darkmode.sty LaTeX package
-.\" 
-.\" Usage: man ./darkmode.rm
-.\"
-.TH DARKMODE 1 "August 2024" "darkmode.sty" "LaTeX Packages"
-.SH NAME
-darkmode.sty \- LaTeX package for dark mode appearance with colored boxes
-.SH SYNOPSIS
-.B \usepackage{darkmode}
-.SH DESCRIPTION
-The
-.B darkmode.sty
-package provides a LaTeX setup for creating documents with a dark mode appearance. This package includes pre-defined styles for different types of mathematical and logical content, all styled to be visually accessible on a dark background. The package features custom environments for definitions, theorems, axioms, proofs, and examples, each with distinct color settings.
+# darkmode.sty
 
-.SH FEATURES
-.PP
-- Dark Mode Background: The background of the document is set to a dark color with light-colored text.
-- Colored Boxes: Custom colored boxes for various content types, with colors applied to the borders and backgrounds.
-- Pre-defined Environments:
-  .TP
-  .B mytheorem
-  For theorems
-  .TP
-  .B myproof
-  For proofs
-  .TP
-  .B myaxiom
-  For axioms
-  .TP
-  .B mydefinition
-  For definitions
-  .TP
-  .B myexample
-  For examples
+`darkmode.sty` is a LaTeX package designed to provide a dark mode appearance with colored boxes for different types of mathematical and logical content. This package includes custom environments for definitions, theorems, axioms, proofs, and examples, each with distinct color settings.
 
-.SH USAGE
-To use the
-.B darkmode.sty
-package in your LaTeX document, follow these steps:
+## Features
 
-.PP
-1. Include the Package: Add the following line to the preamble of your LaTeX document:
-.PP
-.B \usepackage{darkmode}
-.PP
-2. Use the Environments: You can use the following custom environments to format your content:
+- **Dark Mode Background**: The background of the document is set to a dark color with light-colored text.
+- **Colored Boxes**: Custom colored boxes for various content types, with colors applied to the borders and backgrounds.
+- **Pre-defined Environments**:
+  - `mytheorem`: For theorems
+  - `myproof`: For proofs
+  - `myaxiom`: For axioms
+  - `mydefinition`: For definitions
+  - `myexample`: For examples
 
-.TP
-.B mytheorem
-.TS
-center;
-l l.
+## Installation
+Save this file in the same directory of the LaTeX document you are going to create 
+To use the `darkmode.sty` package in your LaTeX document, include the following line in the preamble of your document:
+
+
+```latex
+\usepackage{darkmode}
+```
+## Useage
+You can use the following custom environments to format your content:
+### Theorem
+```latex
 \begin{mytheorem}[optional settings]{Title}
 Your theorem content here.
 \end{mytheorem}
-.TE
-
-.TP
-.B myproof
-.TS
-center;
-l.
+```
+### Proof 
+```latex
 \begin{myproof}[optional settings]
 Your proof content here.
 \end{myproof}
-.TE
-
-.TP
-.B myaxiom
-.TS
-center;
-l l.
+```
+### Axiom
+```latex
 \begin{myaxiom}[optional settings]{Title}
 Your axiom content here.
 \end{myaxiom}
-.TE
-
-.TP
-.B mydefinition
-.TS
-center;
-l l.
+```
+### Definition
+```latex
 \begin{mydefinition}[optional settings]{Title}
 Your definition content here.
 \end{mydefinition}
-.TE
-
-.TP
-.B myexample
-.TS
-center;
-l l.
+```
+### Example 
+```latex
 \begin{myexample}[optional settings]{Title}
 Your example content here.
 \end{myexample}
-.TE
+```
 
-.SH COLOR SETTINGS
-The colors used in the
-.B darkmode.sty
-package are designed to work well with a dark background. Here are the color settings used:
-
-.TP
+## Color Settings
+The colors used in the `darkmode.sty` package are designed to work well with a dark background. Here are the color settings used:
 - Background Color: Dark grey (#1E1E1E)
 - Text Color: Light grey (#C0C0C0)
 - Box Border Colors:
-  .TP
-  Theorem: Tomato (#FF6347)
-  .TP
-  Proof: Light Sea Green (#20B2AA)
-  .TP
-  Axiom: Steel Blue (#4682B4)
-  .TP
-  Definition: Gold (#FFD700)
-  .TP
-  Example: Blue Violet (#8A2BE2)
+  - Theorem: Tomato (#FF6347)
+  - Proof: Light Sea Green (#20B2AA)
+  - Axiom: Steel Blue (#4682B4)
+  - Definition: Gold (#FFD700)
+  - Example: Blue Violet (#8A2BE2)
 - Box Background Colors: Each box type has a background color with 10% opacity based on the border color.
 
-.SH EXAMPLE DOCUMENT
-Here is a basic example of how to use the
-.B darkmode.sty
-package in a LaTeX document:
-
-.TS
-center;
-l l.
+## Example Document:
+Here is a basic example of how to use the darkmode.sty package in a LaTeX document:
+```latex
 \documentclass{article}
 \usepackage{darkmode}
 
@@ -167,11 +112,5 @@ Since \( |x + c| \) is bounded near \( c \), \( |f(x) - f(c)| \) can be made arb
 \end{myexample}
 
 \end{document}
-.TE
-
-.SH SEE ALSO
-The LaTeX documentation for the `tcolorbox` package for more advanced box customization.
-
-.SH AUTHOR
-This manual page was written for the `darkmode.sty` LaTeX package.
-
+```
+# Thank you :>
