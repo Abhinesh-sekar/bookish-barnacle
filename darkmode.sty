@@ -1,0 +1,67 @@
+% Filename: darkmode.sty
+
+\ProvidesPackage{darkmode}[2024/08/03 Dark mode template with colored boxes]
+
+% Packages for dark mode
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\usepackage{geometry}
+
+% Dark mode settings
+\definecolor{bgcolor}{HTML}{1E1E1E} % ChatGPT dark mode background
+\definecolor{fgcolor}{HTML}{C0C0C0} % Light grey text
+\definecolor{bordercolor}{HTML}{555555} % Slightly lighter grey for borders
+
+% Using complementary and analogous color schemes for box borders
+\definecolor{theoremborder}{HTML}{FF6347} % Tomato (complementary to bg)
+\definecolor{proofborder}{HTML}{20B2AA} % Light Sea Green (analogous to fg)
+\definecolor{axiomborder}{HTML}{4682B4} % Steel Blue (complementary to proof)
+\definecolor{definitionborder}{HTML}{FFD700} % Gold (analogous to theorem)
+\definecolor{exampleborder}{HTML}{8A2BE2} % Blue Violet (complementary to grey)
+
+% Underlying grey color for boxes
+\definecolor{boxbasecolor}{HTML}{333333} % Dark grey for boxes
+
+% Box background colors with 10% opacity
+\colorlet{theoremcolor}{theoremborder!10!boxbasecolor}
+\colorlet{proofcolor}{proofborder!10!boxbasecolor}
+\colorlet{axiomcolor}{axiomborder!10!boxbasecolor}
+\colorlet{definitioncolor}{definitionborder!10!boxbasecolor}
+\colorlet{examplecolor}{exampleborder!10!boxbasecolor}
+\definecolor{boxtextcolor}{HTML}{FFFFFF} % White text for boxes
+
+\pagecolor{bgcolor}
+\color{fgcolor}
+
+% Geometry settings for narrower margins
+\geometry{
+  a4paper, % or letterpaper
+  left=1in,
+  right=1in,
+  top=1in,
+  bottom=1in
+}
+
+% Packages for math formatting and colored boxes
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+
+% Theorem, definition, axiom, proof, and example environments
+\newtcolorbox{mytheorem}[2][]{colback=theoremcolor, colframe=theoremborder, coltext=boxtextcolor, fonttitle=\bfseries, title=#2,#1}
+\newtcolorbox{myproof}[1][]{colback=proofcolor, colframe=proofborder, coltext=boxtextcolor, title=Proof,#1}
+\newtcolorbox{myaxiom}[2][]{colback=axiomcolor, colframe=axiomborder, coltext=boxtextcolor, fonttitle=\bfseries, title=#2,#1}
+\newtcolorbox{mydefinition}[2][]{colback=definitioncolor, colframe=definitionborder, coltext=boxtextcolor, fonttitle=\bfseries, title=#2,#1}
+\newtcolorbox{myexample}[2][]{colback=examplecolor, colframe=exampleborder, coltext=boxtextcolor, fonttitle=\bfseries, title=#2,#1}
+
+% Package for better font rendering
+\usepackage{lmodern}
+
+% Custom commands
+\newcommand{\R}{\mathbb{R}} % Real numbers
+\newcommand{\N}{\mathbb{N}} % Natural numbers
+\newcommand{\Z}{\mathbb{Z}} % Integers
+\newcommand{\Q}{\mathbb{Q}} % Rational numbers
+
+\endinput
