@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{darkmode}
+
+\title{Math Course Notes}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Real Analysis}
+\subsection*{Limits and Continuity}
+\begin{mydefinition}{Definition}
+A function \( f: \R \to \R \) is said to be \textit{continuous} at a point \( c \in \R \) if for every \( \epsilon > 0 \), there exists \( \delta > 0 \) such that whenever \( |x - c| < \delta \), it follows that \( |f(x) - f(c)| < \epsilon \).
+\end{mydefinition}
+
+\subsection*{Differentiation}
+\begin{mytheorem}{Theorem}
+If \( f \) is differentiable at \( c \in \R \), then \( f \) is continuous at \( c \).
+\end{mytheorem}
+\begin{myproof}
+Let \( \epsilon > 0 \) be given. Since \( f \) is differentiable at \( c \), there exists \( \delta > 0 \) such that for all \( x \) with \( 0 < |x - c| < \delta \), we have
+\[
+\left| \frac{f(x) - f(c)}{x - c} - f'(c) \right| < \frac{\epsilon}{|x - c|}
+\]
+Thus,
+\[
+|f(x) - f(c)| < \epsilon
+\]
+which shows that \( f \) is continuous at \( c \).
+\end{myproof}
+
+\subsection*{Examples}
+\begin{myexample}{Example 1}
+Consider the function \( f(x) = x^2 \). This function is continuous at every point \( c \in \R \). To see this, note that
+\[
+|f(x) - f(c)| = |x^2 - c^2| = |x - c||x + c|
+\]
+Since \( |x + c| \) is bounded near \( c \), \( |f(x) - f(c)| \) can be made arbitrarily small by choosing \( x \) sufficiently close to \( c \).
+\end{myexample}
+
+\end{document}
