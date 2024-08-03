@@ -21,7 +21,7 @@ To use the `darkmode.sty` package in your LaTeX document, include the following 
 ```latex
 \usepackage{darkmode}
 ```
-## Useage
+## Usage
 You can use the following custom environments to format your content:
 ### Theorem
 ```latex
