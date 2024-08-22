@@ -6,6 +6,12 @@
 \usepackage{xcolor}
 \usepackage{pagecolor}
 \usepackage{geometry}
+\usepackage{multicol}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{lmodern}
 
 % Dark mode settings
 \definecolor{bgcolor}{HTML}{1E1E1E} % ChatGPT dark mode background
@@ -42,12 +48,6 @@
   bottom=1in
 }
 
-% Packages for math formatting and colored boxes
-\usepackage{amsmath, amssymb, amsthm}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{tcolorbox}
-
 % Theorem, definition, axiom, proof, and example environments
 \newtcolorbox{mytheorem}[2][]{colback=theoremcolor, colframe=theoremborder, coltext=boxtextcolor, fonttitle=\bfseries, title=#2,#1}
 \newtcolorbox{myproof}[1][]{colback=proofcolor, colframe=proofborder, coltext=boxtextcolor, title=Proof,#1}
@@ -55,13 +55,16 @@
 \newtcolorbox{mydefinition}[2][]{colback=definitioncolor, colframe=definitionborder, coltext=boxtextcolor, fonttitle=\bfseries, title=#2,#1}
 \newtcolorbox{myexample}[2][]{colback=examplecolor, colframe=exampleborder, coltext=boxtextcolor, fonttitle=\bfseries, title=#2,#1}
 
-% Package for better font rendering
-\usepackage{lmodern}
-
 % Custom commands
 \newcommand{\R}{\mathbb{R}} % Real numbers
 \newcommand{\N}{\mathbb{N}} % Natural numbers
 \newcommand{\Z}{\mathbb{Z}} % Integers
 \newcommand{\Q}{\mathbb{Q}} % Rational numbers
+\newcommand{\sectioninfo}[2]{
+    \vspace{0.5cm}
+    \noindent \textbf{Professor:} #1 \\
+    \textbf{Date:} #2
+}
 
 \endinput
+\begin
